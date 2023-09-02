@@ -73,10 +73,9 @@ def MyCrud():
         html.li(
             {
               "key":b,
-              "ukey":u
+             
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-            f"{b} => {u['updatename']} ; {u['updatename']} ;{u['updatename']} ;] {u['updatename']}",
         html.button({
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
@@ -84,7 +83,8 @@ def MyCrud():
                 "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
             )
-            for b,u, i in enumerate(alltodo.value)
+            for b, i in enumerate(alltodo.value)
+            
     ]
 
     def handle_event(event):
