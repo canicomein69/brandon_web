@@ -65,7 +65,7 @@ def MyCrud():
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
 
         alltodo.set_value(alltodo.value + [updatetodo])
-        savedata(updatetodo)
+        update(updatetodo)
 
 
     list = [
@@ -243,7 +243,7 @@ def login(
 
     return {"messege": "Login successful"}
 
-def savedata(
+def update(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     usernameedit = update_data["updatename"]
