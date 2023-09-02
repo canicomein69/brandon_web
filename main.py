@@ -64,7 +64,6 @@ def MyCrud():
 
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
 
-        alltodo.set_value(alltodo.value + [updatetodo])
         savedata(updatetodo)
 
 
