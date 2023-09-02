@@ -55,6 +55,7 @@ def MyCrud():
             if i == id_edit.value:
                 x['name'] = nameedit
                 x['age'] = ageedit
+                x['postal_code']= [postal_codeedit]
                 x['password'] = passwordedit
         is_edit.set_value(False)    
         set_nameedit("")
