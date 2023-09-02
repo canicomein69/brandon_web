@@ -61,7 +61,7 @@ def MyCrud():
         set_ageedit("")
         set_postal_codeedit("")
         set_passwordedit("")
-        
+
     def update(event):
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
 
@@ -75,6 +75,7 @@ def MyCrud():
               "key":b
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
+            f"{b} => {u['updatename']} ; {u['updatename']} ;{u['updatename']} ;] {u['updatename']}",
         html.button({
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
@@ -82,7 +83,7 @@ def MyCrud():
                 "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
             )
-            for b, i in enumerate(alltodo.value)
+            for b,u, i in enumerate(alltodo.value)
     ]
 
     def handle_event(event):
