@@ -239,7 +239,7 @@ def login(
 
     return {"messege": "Login successful"}
 
-def editbtn(
+def savedata(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     nameedit = update_data["name"]
