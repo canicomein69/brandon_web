@@ -72,7 +72,8 @@ def MyCrud():
     list = [
         html.li(
             {
-              "key":b
+              "key":b,
+              "ukey":u
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
             f"{b} => {u['updatename']} ; {u['updatename']} ;{u['updatename']} ;] {u['updatename']}",
