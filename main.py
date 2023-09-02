@@ -23,11 +23,11 @@ def MyCrud():
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
-        updatetodo = {"name": nameedit, "age": ageedit, "postal_code":postal_codeedit, "password" : passwordedit}
+        updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
-    
+
         alltodo.set_value(alltodo.value + [updatetodo])
         update(updatetodo)
 
@@ -245,13 +245,13 @@ def login(
 def update(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
-    nameedit = update_data["name"]
-    ageedit = update_data["age"]
-    postal_codeedit = update_data["postal_code"]
-    passwordedit = update_data["password"]
+    usernameedit = update_data["updatename"]
+    ageedit = update_data["updateage"]
+    postal_codeedit = update_data["updatepostal_code"]
+    passwordedit = update_data["updatepassword"]
 
     # Create a document to insert into the collection
-    updatedocument = {"updatename":nameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"updatepassword": passwordedit}
+    updatedocument = {"updatename":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"udpatepassword": passwordedit}
     # logger.info("sample log messege")
     print(updatedocument)
 
