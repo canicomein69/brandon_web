@@ -62,13 +62,6 @@ def MyCrud():
         set_postal_codeedit("")
         set_passwordedit("")
 
-    def update(event):
-        updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
-
-        alltodo.set_value(alltodo.value + [updatetodo])
-        update(updatetodo)
-
-
     list = [
         html.li(
             {
@@ -248,7 +241,7 @@ def login(
 
     return {"messege": "Login successful"}
 
-def update(
+def savedata(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     usernameedit = update_data["updatename"]
