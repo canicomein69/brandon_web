@@ -22,8 +22,12 @@ def MyCrud():
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
 
-    # looping data from alltodo to show on web
-    
+       # looping data from alltodo to show on web
+        def deletbtn(b):
+            print("you select",b)
+       
+            update_todos = [item for index,item in enumerate(alltodo.value) if index !=b]
+            alltodo.set_value(update_todos)
 
     list = [
         html.li(
@@ -31,7 +35,10 @@ def MyCrud():
               
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-        )
+        html.button({
+            "on_click":lambda event, b=b:deletebtn(b)
+            },"delete"),
+            )
         for b, i in enumerate(alltodo.value)
     ]
 
