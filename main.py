@@ -40,6 +40,7 @@ def MyCrud():
     return html.div(
         {"style": {"padding": "10px"}},
         ## creating form for submission\
+        
         html.form(
             {"onsubmit": mysubmit},
             html.h1("Welcom to Anime world"),
@@ -76,24 +77,14 @@ def MyCrud():
             ),
         ),
         html.ul(list),
-    )
-def Photo():
-    return html.img(
+        html.img(
         {
             "src": "https://picsum.photos/id/274/500/300",
             "style": {"width": "30%"},
             "alt": "Ray Charles",
         }
     )
-def Gallery():
-    return html.section(
-        html.h5("Famous Musicians"),
-        Photo(),
-        Photo(),
-        Photo(),
     )
-
-
 
 
 
@@ -137,4 +128,4 @@ def login(
 
     return {"messege": "Login successful"}
 
-configure(app, MyCrud,Gallery)
+configure(app, MyCrud)
