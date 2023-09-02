@@ -61,7 +61,8 @@ def MyCrud():
         set_ageedit("")
         set_postal_codeedit("")
         set_passwordedit("")
-    
+        
+    def update(event):
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
 
         alltodo.set_value(alltodo.value + [updatetodo])
