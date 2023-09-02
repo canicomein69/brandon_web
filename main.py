@@ -141,7 +141,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":ageedit,
-                    "placeholder": "name",
+                    "placeholder": "age",
                     "on_change": lambda event: set_ageedit(event["target"]["value"]),
                     
                 },
@@ -151,7 +151,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":passwordedit,
-                    "placeholder": "name",
+                    "placeholder": "password",
                     "on_change": lambda event: set_passwordedit(event["target"]["value"]),
                     
                 },
@@ -161,7 +161,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":postal_codeedit,
-                    "placeholder": "name",
+                    "placeholder": "postal_code",
                     "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
