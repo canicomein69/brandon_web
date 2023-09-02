@@ -77,6 +77,25 @@ def MyCrud():
         ),
         html.ul(list),
     )
+@component
+def Photo():
+    return html.img(
+        {
+            "src": "https://picsum.photos/id/274/500/300",
+            "style": {"width": "30%"},
+            "alt": "Ray Charles",
+        }
+    )
+
+
+@component
+def Gallery():
+    return html.section(
+        html.h3("Famous Musicians"),
+        Photo(),
+        Photo(),
+        Photo(),
+    )
 
 
 
@@ -120,4 +139,4 @@ def login(
 
     return {"messege": "Login successful"}
 
-configure(app, MyCrud)
+configure(app, MyCrud, Gallery)
