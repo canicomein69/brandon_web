@@ -7,15 +7,6 @@ from pymongo import MongoClient
 
 
 @component
-def Photo():
-    return html.img(
-        {
-            "src": "https://picsum.photos/id/237/500/300",
-            "style": {"width": "50%"},
-            "alt": "Puppy",
-        }
-    )
-
 def MyCrud():
     ## Creating state
     alltodo = use_state([])
@@ -129,4 +120,4 @@ def login(
 
     return {"messege": "Login successful"}
 
-configure(app, MyCrud, Photo)
+configure(app, MyCrud)
