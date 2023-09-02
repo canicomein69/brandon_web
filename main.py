@@ -85,8 +85,8 @@ def MyCrud():
 
     return html.div(
         {"style": {"padding": "10px"}},
-        ## creating form for submission\
-        
+        ## creating form for submission0
+    
         html.form(
             {"onsubmit": mysubmit},
             html.h1("Welcom to Anime world"),
@@ -126,9 +126,17 @@ def MyCrud():
                     ),
                 },
                 "join",
+        
             ),
-            # creating submit button on form
-            html.input(
+        ),
+        
+        html.ul(list),
+
+        html.div(
+                {
+                "style":{"display":"none" if is_edit.value == False else "block"}
+                },
+                 html.input(
                 {
                     "type": "test",
                     "value":nameedit,
@@ -174,11 +182,11 @@ def MyCrud():
                     "on_click":savedata
                 },
                 "Update Guys",
-            ),
+            )
+
         ),
         
         html.ul(list),
-
         html.img(
         {
             "src": "https://picsum.photos/id/274/500/300",
