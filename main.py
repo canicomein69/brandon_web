@@ -81,7 +81,7 @@ def MyCrud():
         html.img(
         {
             "src": "https://picsum.photos/id/274/500/300",
-            "style": {"width": "150%"},
+            "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         }
     )
