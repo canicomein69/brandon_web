@@ -58,9 +58,9 @@ def MyCrud():
                 x['password'] = passwordedit
         is_edit.set_value(False)    
         set_nameedit("")
-        set_ageedit(0)
-        set_postal_codeedit(0)
-        set_passwordedit(0)
+        set_ageedit("")
+        set_postal_codeedit("")
+        set_passwordedit("")
 
 
     list = [
