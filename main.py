@@ -187,7 +187,7 @@ def MyCrud():
             html.button(
                 {
                     "type": "Update Guys",
-                    "on_click": savedata(
+                    "on_click": event(
                         lambda event: savedata(event), prevent_default=True),
                 },
                 "Update Guys",
