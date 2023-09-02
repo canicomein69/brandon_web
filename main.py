@@ -27,8 +27,11 @@ def MyCrud():
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
+    def update(event):
+        updatetodo = {"name": nameedit, "age": ageedit, "postal_code":postal_codeedit, "password" : passwordedit}
 
-    
+        alltodo.set_value(alltodo.value + [updatetodo])
+        update(updatetodo)
 
        # looping data from alltodo to show on web
     def deletebtn(b):
@@ -51,10 +54,6 @@ def MyCrud():
                 set_postal_codeedit(x['postal_code'])
                 set_passwordedit(x['password'])
                 id_edit.set_value(b)
-
-            updatetodo = {"name": nameedit, "age": ageedit, "postal_code":postal_codeedit, "password" : passwordedit}
-            alltodo.set_value(alltodo.value + [updatetodo])
-        update(updatetodo)
 
     def savedata(event):
         for i,x in enumerate(alltodo.value):
