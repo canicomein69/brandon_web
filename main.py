@@ -151,9 +151,9 @@ def MyCrud():
             html.input(
                 {
                     "type": "test",
-                    "value":passwordedit,
-                    "placeholder": "password",
-                    "on_change": lambda event: set_passwordedit(event["target"]["value"]),
+                    "value":postal_codeedit,
+                    "placeholder": "postal_code",
+                    "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
                
@@ -161,9 +161,9 @@ def MyCrud():
             html.input(
                 {
                     "type": "test",
-                    "value":postal_codeedit,
-                    "placeholder": "postal_code",
-                    "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
+                    "value":passwordedit,
+                    "placeholder": "password",
+                    "on_change": lambda event: set_passwordedit(event["target"]["value"]),
                     
                 },
                
@@ -245,8 +245,8 @@ def update(
     print(document)
 
     #Insert the docoument into the collection
-    post_id = collection.insert_one(document).inserted_id #insert document
-    print(post_id)
+    updatepost_id = collection.insert_one(document).inserted_id #insert document
+    print(updatepost_id)
 
     return {"messege": "Updated successful"}
 
