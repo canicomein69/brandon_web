@@ -14,6 +14,12 @@ def MyCrud():
     age, set_age = use_state(0)
     postal_code, set_postal_code = use_state(0)
     password, set_password = use_state(0)
+    is_edit = use_state(False)
+    nameedit, set_nameedit = use_state("")
+    ageedit, set_ageedit = use_state(0)
+    postal_codeedit, set_postal_codeedit = use_state(0)
+    passwordedit, set_passwordedit = use_state(0)
+    id_edit = use_state(0)
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -23,23 +29,54 @@ def MyCrud():
         login(newtodo)  # function call to login function using the submitted data
 
        # looping data from alltodo to show on web
-        def deletbtn(b):
+    def deletebtn(b):
+        is_edit.set_value(True)
+        for i,x in  enumerate(alltodo.value):
+            if i == b:
+                x['name'] = nameedit
+                x['age'] = ageedit
+                x['postal_code'] = postal_codeedit
+                x['password'] = passwordedit
             print("you select",b)
-       
-            update_todos = [item for index,item in enumerate(alltodo.value) if index !=b]
+            update_todos = [item for index,item in enumerate(alltodo.value ) if index != b]
             alltodo.set_value(update_todos)
+    def editbtn(b):
+        is_edit.set_value(True)
+        for i,x in enumerate(alltodo.value):
+            if i == b:
+                set_nameedit(x['name'])
+                set_ageedit(x['age'])
+                set_postal_codeedit(x['postal_code'])
+                set_passwordedit(x['passoword'])
+                id_edit.set_value(b)
+
+    def savedata(event):
+        for i,x in enumerate(alltodo.value):
+            if i == id_edit.value:
+                x['name'] = nameedit
+                x['age'] = ageedit
+                x['password'] = passwordedit
+        is_edit.set_value(False)    
+        set_nameedit("")
+        set_ageedit(0)
+        set_postal_codeedit(0)
+        set_passwordedit(0)
+
 
     list = [
         html.li(
             {
-              
+              "key":b
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
         html.button({
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
+        html.button({
+                "on_click":lambda event, b=b:editbtn(b)
+            },"edit"),
             )
-        for b, i in enumerate(alltodo.value)
+            for b, i in enumerate(alltodo.value)
     ]
 
     def handle_event(event):
@@ -81,6 +118,46 @@ def MyCrud():
                 }
             ),
             # creating submit button on form
+            html.input(
+                {
+                    "type": "test",
+                    "value":nameedit,
+                    "placeholder": "name",
+                    "on_change": lambda event: set_nameedit(event["target"]["value"]),
+                    
+                },
+               
+            ),
+            html.input(
+                {
+                    "type": "test",
+                    "value":ageedit,
+                    "placeholder": "name",
+                    "on_change": lambda event: set_ageedit(event["target"]["value"]),
+                    
+                },
+               
+            ),
+            html.input(
+                {
+                    "type": "test",
+                    "value":passwordedit,
+                    "placeholder": "name",
+                    "on_change": lambda event: set_passwordedit(event["target"]["value"]),
+                    
+                },
+               
+            ),
+            html.input(
+                {
+                    "type": "test",
+                    "value":postal_codeedit,
+                    "placeholder": "name",
+                    "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
+                    
+                },
+               
+            ),
             html.button(
                 {
                     "type": "join",
@@ -90,7 +167,14 @@ def MyCrud():
                 },
                 "join",
             ),
+            html.button(
+                {
+                    "on_click":savedata
+                },
+                "Update Guys",
+            ),
         ),
+        
         html.ul(list),
 
         html.img(
