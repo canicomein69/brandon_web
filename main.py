@@ -88,7 +88,7 @@ def Photo():
     )
 
 
-@component
+
 def Gallery():
     return html.section(
         html.h3("Famous Musicians"),
