@@ -16,9 +16,9 @@ def MyCrud():
     password, set_password = use_state(0)
     is_edit = use_state(False)
     nameedit, set_nameedit = use_state("")
-    ageedit, set_ageedit = use_state(0)
-    postal_codeedit, set_postal_codeedit = use_state(0)
-    passwordedit, set_passwordedit = use_state(0)
+    ageedit, set_ageedit = use_state("")
+    postal_codeedit, set_postal_codeedit = use_state("")
+    passwordedit, set_passwordedit = use_state("")
     id_edit = use_state(0)
 
     def mysubmit(event):
