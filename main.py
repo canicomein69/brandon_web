@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from reactpy.backend.fastapi import configure
-from reactpy import component, event, html, use_state, run
+from reactpy import component, event, html, use_state
 import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
@@ -77,7 +77,6 @@ def MyCrud():
         ),
         html.ul(list),
     )
-@component
 def Photo():
     return html.img(
         {
@@ -86,17 +85,16 @@ def Photo():
             "alt": "Ray Charles",
         }
     )
-
-
-
 def Gallery():
     return html.section(
-        html.h3("Famous Musicians"),
+        html.h5("Famous Musicians"),
         Photo(),
         Photo(),
         Photo(),
     )
-run(Gallery)
+
+
+
 
 
 app = FastAPI()
@@ -140,4 +138,3 @@ def login(
     return {"messege": "Login successful"}
 
 configure(app, MyCrud)
-run(Gallery)
