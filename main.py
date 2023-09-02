@@ -27,11 +27,6 @@ def MyCrud():
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
-    def update(event):
-        updatetodo = {"name": nameedit, "age": ageedit, "postal_code":postal_codeedit, "password" : passwordedit}
-
-        alltodo.set_value(alltodo.value + [updatetodo])
-        update(updatetodo)
 
        # looping data from alltodo to show on web
     def deletebtn(b):
@@ -244,7 +239,7 @@ def login(
 
     return {"messege": "Login successful"}
 
-def update(
+def deletebtn(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     nameedit = update_data["name"]
