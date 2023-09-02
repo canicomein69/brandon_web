@@ -188,7 +188,7 @@ def MyCrud():
                 {
                     "type": "Update Guys",
                     "on_click": savedata(
-                        lambda event: update(event), prevent_default=True),
+                        lambda event: savedata(event), prevent_default=True),
                 },
                 "Update Guys",
             )
