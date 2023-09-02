@@ -47,7 +47,7 @@ def MyCrud():
                 set_nameedit(x['name'])
                 set_ageedit(x['age'])
                 set_postal_codeedit(x['postal_code'])
-                set_passwordedit(x['passoword'])
+                set_passwordedit(x['password'])
                 id_edit.set_value(b)
 
     def savedata(event):
