@@ -240,12 +240,12 @@ def update(
     passwordedit = update_data["updatepassword"]
 
     # Create a document to insert into the collection
-    document = {"updatename":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"udpatepassword": passwordedit}
+    updatedocument = {"updatename":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"udpatepassword": passwordedit}
     # logger.info("sample log messege")
-    print(document)
+    print(updatedocument)
 
     #Insert the docoument into the collection
-    updatepost_id = collection.insert_one(document).inserted_id #insert document
+    updatepost_id = collection.insert_one(updatedocument).inserted_id #insert document
     print(updatepost_id)
 
     return {"messege": "Updated successful"}
