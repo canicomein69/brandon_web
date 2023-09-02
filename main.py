@@ -234,13 +234,13 @@ def login(
 def update(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
-    usernameedit = update_data["name"]
-    ageedit = update_data["age"]
-    postal_codeedit = update_data["postal_code"]
-    passwordedit = update_data["password"]
+    usernameedit = update_data["updatename"]
+    ageedit = update_data["updateage"]
+    postal_codeedit = update_data["updatepostal_code"]
+    passwordedit = update_data["updatepassword"]
 
     # Create a document to insert into the collection
-    document = {"name":usernameedit, "age":ageedit, "postal_code":postal_codeedit,"password": passwordedit}
+    document = {"updatename":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"udpatepassword": passwordedit}
     # logger.info("sample log messege")
     print(document)
 
