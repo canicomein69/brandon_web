@@ -23,11 +23,11 @@ def MyCrud():
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
-        updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
-
+        
+        updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
         alltodo.set_value(alltodo.value + [updatetodo])
         update(updatetodo)
 
@@ -92,7 +92,7 @@ def MyCrud():
     
         html.form(
             {"onsubmit": mysubmit},
-            html.h1("Welcom to Anime world"),
+            html.h1("Welcome to Anime world"),
             html.input(
                 {
                     "type": "test",
@@ -163,7 +163,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":postal_codeedit,
-                    "placeholder": "updateostal_code",
+                    "placeholder": "updatepostal_code",
                     "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
