@@ -221,7 +221,7 @@ def login(
     password = login_data["password"]
 
     # Create a document to insert into the collection
-    document = {"name":username, "age":age, "posta_code":postal_code,"password": password}
+    document = {"name":username, "age":age, "postal_code":postal_code,"password": password}
     # logger.info("sample log messege")
     print(document)
 
@@ -230,5 +230,24 @@ def login(
     print(post_id)
 
     return {"messege": "Login successful"}
+
+def update(
+    update_data: dict,
+ ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
+    usernameedit = update_data["name"]
+    ageedit = update_data["age"]
+    postal_codeedit = update_data["postal_code"]
+    passwordedit = update_data["password"]
+
+    # Create a document to insert into the collection
+    document = {"name":usernameedit, "age":ageedit, "postal_code":postal_codeedit,"password": passwordedit}
+    # logger.info("sample log messege")
+    print(document)
+
+    #Insert the docoument into the collection
+    post_id = collection.insert_one(document).inserted_id #insert document
+    print(post_id)
+
+    return {"messege": "Updated successful"}
 
 configure(app, MyCrud)
