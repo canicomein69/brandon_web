@@ -117,6 +117,15 @@ def MyCrud():
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
+            html.button(
+                {
+                    "type": "join",
+                    "on_click": event(
+                        lambda event: mysubmit(event), prevent_default=True
+                    ),
+                },
+                "join",
+            ),
             # creating submit button on form
             html.input(
                 {
@@ -158,15 +167,7 @@ def MyCrud():
                 },
                
             ),
-            html.button(
-                {
-                    "type": "join",
-                    "on_click": event(
-                        lambda event: mysubmit(event), prevent_default=True
-                    ),
-                },
-                "join",
-            ),
+            
             html.button(
                 {
                     "on_click":savedata
