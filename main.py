@@ -137,4 +137,4 @@ def login(
 
     return {"messege": "Login successful"}
 
-configure(app, MyCrud)
+configure(app, MyCrud,Gallery)
