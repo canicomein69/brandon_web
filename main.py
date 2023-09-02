@@ -77,10 +77,11 @@ def MyCrud():
             ),
         ),
         html.ul(list),
+
         html.img(
         {
             "src": "https://picsum.photos/id/274/500/300",
-            "style": {"width": "30%"},
+            "style": {"width": "150%"},
             "alt": "Ray Charles",
         }
     )
