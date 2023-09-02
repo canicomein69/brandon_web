@@ -28,7 +28,7 @@ def MyCrud():
             {
               
             },
-            f"{b} => {i['name']} ; i['age'] ; {i['password']} ",
+            f"{b} => {i['name']} ; {i['age'] }; {i['password']} ",
         )
         for b, i in enumerate(alltodo.value)
     ]
