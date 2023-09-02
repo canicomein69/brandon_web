@@ -251,7 +251,7 @@ def update(
     passwordedit = update_data["password"]
 
     # Create a document to insert into the collection
-    updatedocument = {"name":usernameedit, "age":ageedit, "postal_code":postal_codeedit,"password": passwordedit}
+    updatedocument = {"updatename":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"updatepassword": passwordedit}
     # logger.info("sample log messege")
     print(updatedocument)
 
