@@ -12,10 +12,11 @@ def MyCrud():
     alltodo = use_state([])
     name, set_name = use_state("")
     age, set_age = use_state(0)
+    postal_code, set_postal_code = use_state(0)
     password, set_password = use_state(0)
 
     def mysubmit(event):
-        newtodo = {"name": name, "age":age , "password": password}
+        newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
 
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
@@ -29,7 +30,7 @@ def MyCrud():
             {
               
             },
-            f"{b} => {i['name']} ; {i['age'] }; {i['password']} ",
+            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
         )
         for b, i in enumerate(alltodo.value)
     ]
@@ -56,6 +57,13 @@ def MyCrud():
                     "type": "test",
                     "placeholder": "age",
                     "on_change": lambda event: set_age(event["target"]["value"]),
+                }
+            ),
+             html.input(
+                {
+                    "type": "test",
+                    "placeholder": "postal_code",
+                    "on_change": lambda event: set_postal_code(event["target"]["value"]),
                 }
             ),
             html.input(
@@ -116,10 +124,11 @@ def login(
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     username = login_data["name"]
     age = login_data["age"]
+    postal_code = login_data["postal_code"]
     password = login_data["password"]
 
     # Create a document to insert into the collection
-    document = {"name":username, "age":age, "password": password}
+    document = {"name":username, "age":age, "posta_code":postal_code,"password": password}
     # logger.info("sample log messege")
     print(document)
 
