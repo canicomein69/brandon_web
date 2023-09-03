@@ -134,7 +134,7 @@ def MyCrud():
                 {   
                     "style ":{"backgroud_color":mycolor,"color":"white"},
                     "type": "join",
-                    "on_click": changecolor(
+                    "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True,
                     ),
                 },
