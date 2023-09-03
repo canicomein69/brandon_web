@@ -4,6 +4,8 @@ from reactpy import component, event, html, use_state,web
 import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
+from pydantic import BaseModel
+from typing import Union
 
 
 
@@ -208,7 +210,6 @@ def MyCrud():
                 {
                     "type": "Update Guys",
                     "size":"small",
-                    "endIcon":{SendIcon },
                     "color":"secondary",
                     "variant":"contained",
                     "on_click": event(
@@ -229,7 +230,7 @@ def MyCrud():
         html.img(
         {
            "src": "https://picsum.photos/id/274/500/300",
-            "style": {"width": "100%" , "height":"50%"}, 
+            "style": {"bakcground":"black","width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
     ),
