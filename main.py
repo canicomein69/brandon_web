@@ -222,7 +222,10 @@ def MyCrud():
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
-    )
+    ),
+     Alert({
+            "severity":"Success"
+            },"this alert test")
     )
 
 
