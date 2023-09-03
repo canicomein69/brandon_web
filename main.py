@@ -30,6 +30,7 @@ def MyCrud():
     )
 
     Button = web.export(mui,"Button")
+    Alert= web.export(mui,"Alert")
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -202,7 +203,10 @@ def MyCrud():
                         lambda event: savedata(event), prevent_default=True),
                 },
                 "Update Guys",
-            )
+            ),
+             Alert({
+            "severity":"Success"
+            },"this alert test")
 
         ),
             
