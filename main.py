@@ -227,7 +227,7 @@ def MyCrud():
        
         html.img(
         {
-           "url": "/Users/HP/Pictures/Camera Roll/goku.jpg",
+            "src": "/Users/HP/Pictures/Camera Roll/goku.jpg",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
