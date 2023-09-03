@@ -172,7 +172,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":nameedit,
-                    "style":{"display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
                     "placeholder": "updatename",
                     "on_change": lambda event: set_nameedit(event["target"]["value"]),
                     
@@ -183,7 +183,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":ageedit,
-                    "style":{"display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
                     "placeholder": "updateage",
                     "on_change": lambda event: set_ageedit(event["target"]["value"]),
                     
@@ -195,7 +195,7 @@ def MyCrud():
                     "type": "test",
                     "value":postal_codeedit,
                     "placeholder": "updatepostal_code",
-                    "style":{"display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
                     "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
@@ -205,7 +205,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":passwordedit,
-                    "style":{"display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
                     "placeholder": "updatepassword",
                     "on_change": lambda event: set_passwordedit(event["target"]["value"]),
                     
@@ -217,7 +217,7 @@ def MyCrud():
                 {
                     "type": "Update Guys",
                     "size":"small",
-                    "style":{"display":"none" if is_edit.value == False else "block"},
+                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block"},
                     "color":"secondary",
                     "variant":"contained",
                     "on_click": event(
