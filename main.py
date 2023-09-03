@@ -151,7 +151,7 @@ def MyCrud():
                     "size":"medium",
                     "color":"primary",
                     "variant":"contained",
-                    "endIcon":{"SendIcon"},
+                    "endIcon":"SendIcon",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
