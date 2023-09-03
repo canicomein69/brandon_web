@@ -113,7 +113,6 @@ def MyCrud():
                Card(
                CardConetent(
                 Typography({
-                    "Color":"red",
                     "variant":"h5",
                 },"Welcome to Anime World"))
             ),
@@ -149,7 +148,7 @@ def MyCrud():
                 { 
                     "type": "join",
                     "color":"primary",
-                    "variant":"contained",
+                    "variant":"outlined",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
