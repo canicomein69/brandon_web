@@ -107,7 +107,9 @@ def MyCrud():
         print(event)
 
     return html.div(
-        {"style": {"padding": "10px"}},
+        {"style": {"padding": "10px",
+                   "background":"blue"
+                   }},
         ## creating form for submission0
     
         html.form(
@@ -230,7 +232,7 @@ def MyCrud():
         html.img(
         {
            "src": "https://picsum.photos/id/274/500/300",
-            "style": {"bakcground":"black","width": "100%" , "height":"50%"}, 
+            "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
     ),
