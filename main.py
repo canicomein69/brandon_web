@@ -207,7 +207,7 @@ def MyCrud():
             Button(
                 {
                     "type": "Update Guys",
-                    "size":"medium",
+                    "size":"small",
                     "color":"secondary",
                     "variant":"contained",
                     "on_click": event(
@@ -227,7 +227,7 @@ def MyCrud():
        
         html.img(
         {
-           "src": "https://picsum.photos/id/274/500/300",
+           "url": "/Users/HP/Pictures/Camera Roll/goku.jpg",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
