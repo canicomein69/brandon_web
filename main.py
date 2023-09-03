@@ -120,6 +120,13 @@ def MyCrud():
                     "style": {"padding": "10px","opacity":"50%"}
                 },"Welcome to Anime World"))
             ),
+            html.img(
+        {
+           "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
+            "style": {"width": "100%" , "height":"50%"}, 
+            "alt": "Ray Charles",
+        },
+    ),
             html.input(
                 {
                     "type": "test",
@@ -229,13 +236,6 @@ def MyCrud():
              
 
         ),
-        html.img(
-        {
-           "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
-            "style": {"width": "100%" , "height":"50%"}, 
-            "alt": "Ray Charles",
-        },
-    ),
      
             
 
