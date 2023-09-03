@@ -135,9 +135,11 @@ def MyCrud():
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
-            html.button(
+            Button(
                 { 
                     "type": "join",
+                    "color":"primary",
+                    "variant":"contained",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
