@@ -167,14 +167,12 @@ def MyCrud():
         
             ),
             html.div(
-                {
-                "style":{"margin":"1rem","display":"none" if is_edit.value == False else "block"},
                 
-                },
                  html.input(
                 {
                     "type": "test",
                     "value":nameedit,
+                    "style":{"display":"none" if is_edit.value == False else "block","margin":"1rem"},
                     "placeholder": "updatename",
                     "on_change": lambda event: set_nameedit(event["target"]["value"]),
                     
