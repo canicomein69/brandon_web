@@ -229,13 +229,6 @@ def MyCrud():
              
 
         ),
-            
-
-        ),
-        
-        html.ul(list),
-
-       
         html.img(
         {
            "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
@@ -244,6 +237,13 @@ def MyCrud():
         },
     ),
      
+            
+
+        ),
+        
+        html.ul(list),
+
+       
     )
 
 
