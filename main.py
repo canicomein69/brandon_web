@@ -148,6 +148,7 @@ def MyCrud():
                 { 
                     
                     "type": "join",
+                    "size":"medium",
                     "color":"primary",
                     "variant":"contained",
                     "on_click": event(
@@ -206,6 +207,7 @@ def MyCrud():
             Button(
                 {
                     "type": "Update Guys",
+                    "size":"medium",
                     "color":"secondary",
                     "variant":"contained",
                     "on_click": event(
