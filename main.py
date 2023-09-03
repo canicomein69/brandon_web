@@ -131,7 +131,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "age",
-                    "style": {"padding": "10px"},
+                    "style": {"padding": "10px","margin":"1rem"},
                     "on_change": lambda event: set_age(event["target"]["value"]),
                 }
             ),
@@ -139,7 +139,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "postal_code",
-                    "style": {"padding": "10px"},
+                    "style": {"padding": "10px","margin":"1rem"},
                     "on_change": lambda event: set_postal_code(event["target"]["value"]),
                 }
             ),
@@ -147,7 +147,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "password",
-                    "style": {"padding": "10px"},
+                    "style": {"padding": "10px","margin":"1rem"},
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
@@ -168,7 +168,7 @@ def MyCrud():
             ),
             html.div(
                 {
-                "style":{"display":"none" if is_edit.value == False else "block"},
+                "style":{"margin":"1rem","display":"none" if is_edit.value == False else "block"},
                 
                 },
                  html.input(
