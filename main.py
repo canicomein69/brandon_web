@@ -25,11 +25,14 @@ def MyCrud():
 
     mui = web.module_from_template(
     "react",
-    "@mui/material",
-    fallback="please wait loading...."
+    "@mui/material"
+    
     )
 
     Button = web.export(mui,"Button")
+    Card = web.export(mui,"Card")
+    CardConetent = web.export(mui,"CardContent")
+    Typography = web.export(mui,"Typography")
     
 
     def mysubmit(event):
@@ -107,7 +110,12 @@ def MyCrud():
     
         html.form(
             {"onsubmit": mysubmit},
-            html.h1("Welcome to Anime world"),
+               Card(
+               CardConetent(
+                Typography({
+                    "variant":"h1",
+                },"Welcome to Anime World"))
+            ),
             html.input(
                 {
                     "type": "test",
