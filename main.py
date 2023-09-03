@@ -107,9 +107,7 @@ def MyCrud():
         print(event)
 
     return html.div(
-        {"style": {"padding": "10px",
-                   "background":"blue"
-                   }},
+        
         ## creating form for submission0
     
         html.form(
@@ -118,12 +116,14 @@ def MyCrud():
                CardConetent(
                 Typography({
                     "variant":"h5",
+                    "style": {"padding": "10px","background":"black"}
                 },"Welcome to Anime World"))
             ),
             html.input(
                 {
                     "type": "test",
                     "placeholder": "name",
+                    "style": {"padding": "10px"},
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
@@ -131,6 +131,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "age",
+                    "style": {"padding": "10px"},
                     "on_change": lambda event: set_age(event["target"]["value"]),
                 }
             ),
@@ -138,6 +139,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "postal_code",
+                    "style": {"padding": "10px"},
                     "on_change": lambda event: set_postal_code(event["target"]["value"]),
                 }
             ),
@@ -145,6 +147,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "password",
+                    "style": {"padding": "10px"},
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
@@ -153,6 +156,7 @@ def MyCrud():
                     
                     "type": "join",
                     "size":"medium",
+                    "style": {"padding": "10px"},
                     "color":"primary",
                     "variant":"contained",
                     "on_click": event(
