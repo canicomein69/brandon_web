@@ -204,9 +204,7 @@ def MyCrud():
                 },
                 "Update Guys",
             ),
-             Alert({
-            "severity":"Success"
-            },"this alert test")
+             
 
         ),
             
