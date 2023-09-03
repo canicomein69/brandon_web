@@ -20,6 +20,7 @@ def MyCrud():
     postal_codeedit, set_postal_codeedit = use_state("")
     passwordedit, set_passwordedit = use_state("")
     id_edit = use_state(0)
+    edittodo =  use_state([])
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -61,6 +62,11 @@ def MyCrud():
         set_ageedit("")
         set_postal_codeedit("")
         set_passwordedit("")
+
+        updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
+
+        edittodo.set_value(edittodo.value + [updatetodo])
+        update(updatetodo)
 
 
 
@@ -130,7 +136,7 @@ def MyCrud():
                 "join",
         
             ),
-             html.div(
+            html.div(
                 {
                 "style":{"display":"none" if is_edit.value == False else "block"}
                 },
@@ -185,7 +191,7 @@ def MyCrud():
             )
 
         ),
-        
+
         ),
         
         html.ul(list),
@@ -243,7 +249,7 @@ def login(
 
     return {"messege": "Login successful"}
 
-def savedata(
+def update(
     update_data: dict,
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     usernameedit = update_data["updatename"]
