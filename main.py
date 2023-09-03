@@ -145,7 +145,6 @@ def MyCrud():
                 }
             ),
             Button(
-                SendIcon(
                 { 
                     
                     "type": "join",
@@ -209,6 +208,7 @@ def MyCrud():
                 {
                     "type": "Update Guys",
                     "size":"small",
+                    "endIcon":SendIcon,
                     "color":"secondary",
                     "variant":"contained",
                     "on_click": event(
@@ -234,7 +234,7 @@ def MyCrud():
         },
     ),
      
-    ))
+    )
 
 
 
