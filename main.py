@@ -80,8 +80,10 @@ def MyCrud():
         Photo("Landscape", image_id=830),
         Photo("City", image_id=274),
         Photo("Puppy", image_id=237),
-        )
     )
+        
+    )
+
     
      
     
@@ -200,7 +202,7 @@ def MyCrud():
                 {
                     "type": "Update Guys",
                     "on_click": event(
-                        lambda event: savedata(event), prevent_default=True),
+                    lambda event: savedata(event), prevent_default=True),
                 },
                 "Update Guys",
             )
@@ -211,14 +213,6 @@ def MyCrud():
         
         html.ul(list),
 
-       
-        html.img(
-        {
-           "src": "https://picsum.photos/id/274/500/300",
-            "style": {"width": "100%" , "height":"50%"}, 
-            "alt": "Ray Charles",
-        }
-    )
     )
 
 
