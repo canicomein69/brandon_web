@@ -151,6 +151,7 @@ def MyCrud():
                     "size":"medium",
                     "color":"primary",
                     "variant":"contained",
+                    "endIcon":{"SendIcon"},
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
@@ -227,7 +228,7 @@ def MyCrud():
        
         html.img(
         {
-            "src": "/Users/HP/Pictures/Camera Roll/goku.jpg",
+           "src": "https://picsum.photos/id/274/500/300",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
