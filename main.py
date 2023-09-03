@@ -130,11 +130,7 @@ def MyCrud():
                 "join",
         
             ),
-        ),
-        
-        html.ul(list),
-
-        html.div(
+             html.div(
                 {
                 "style":{"display":"none" if is_edit.value == False else "block"}
                 },
@@ -190,7 +186,11 @@ def MyCrud():
 
         ),
         
+        ),
+        
         html.ul(list),
+
+       
         html.img(
         {
             "src": "https://picsum.photos/id/274/500/300",
