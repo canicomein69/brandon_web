@@ -238,7 +238,7 @@ def MyCrud():
        
         html.img(
         {
-           "src": "https://picsum.photos/id/274/500/300",
+           "src": "https://Users/HP/Pictures/Camera Roll/demon.jpg.jpg",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
