@@ -208,7 +208,7 @@ def MyCrud():
                 {
                     "type": "Update Guys",
                     "size":"small",
-                    "endIcon":SendIcon,
+                    "endIcon":{SendIcon },
                     "color":"secondary",
                     "variant":"contained",
                     "on_click": event(
