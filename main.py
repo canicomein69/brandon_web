@@ -231,7 +231,7 @@ def MyCrud():
         ),
         html.img(
         {
-           "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
+           "src": "https://encrypted-tbn0.gstatic.com/images",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
