@@ -21,6 +21,7 @@ def MyCrud():
     passwordedit, set_passwordedit = use_state("")
     id_edit = use_state(0)
     edittodo =  use_state([])
+    mycolor,set_mycolor=use_state("red")
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -91,6 +92,9 @@ def MyCrud():
     def handle_event(event):
         print(event)
 
+    def changecolor(event):
+        set_mycolor("orange" if mycolor == "red" else "orange")
+
     return html.div(
         {"style": {"padding": "10px"}},
         ## creating form for submission0
@@ -127,10 +131,11 @@ def MyCrud():
                 }
             ),
             html.button(
-                {
+                {   
+                    "style ":{"backgroud_color":mycolor,"color":"white"},
                     "type": "join",
-                    "on_click": event(
-                        lambda event: mysubmit(event), prevent_default=True
+                    "on_click": changecolor(
+                        lambda event: mysubmit(event), prevent_default=True,
                     ),
                 },
                 "join",
