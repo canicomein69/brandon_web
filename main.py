@@ -146,9 +146,9 @@ def MyCrud():
             ),
             Button(
                 { 
-                    "color":"join",
+                    
                     "type": "join",
-                    "color":"primary",
+                    "color":"join",
                     "variant":"contained",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
