@@ -238,7 +238,7 @@ def MyCrud():
        
         html.img(
         {
-           "src": "https://Users/HP/Pictures/CameraRoll/demon.jpg.jpg",
+           "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         },
