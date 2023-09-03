@@ -68,8 +68,23 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
 
-
-
+    def Photo(alt_text, image_id):
+        return html.img(
+        {
+            "src": f"https://picsum.photos/id/{image_id}/500/200",
+            "style": {"width": "50%"},
+            "alt": alt_text,
+        },
+        html.section(
+        html.h1("Photo Gallery"),
+        Photo("Landscape", image_id=830),
+        Photo("City", image_id=274),
+        Photo("Puppy", image_id=237),
+        )
+    )
+    
+     
+    
     list = [
         html.li(
             {
@@ -199,7 +214,7 @@ def MyCrud():
        
         html.img(
         {
-           "src": "builtin/demon.jpg",
+           "src": "https://picsum.photos/id/274/500/300",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         }
