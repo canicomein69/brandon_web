@@ -113,7 +113,7 @@ def MyCrud():
                Card(
                CardConetent(
                 Typography({
-                    "variant":"h1",
+                    "variant":"h3",
                 },"Welcome to Anime World"))
             ),
             html.input(
