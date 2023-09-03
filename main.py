@@ -124,6 +124,7 @@ def MyCrud():
                     "type": "test",
                     "placeholder": "name",
                     "style": {"padding": "10px","margin":"1rem"},
+                    "justify-content":"space-between",
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
