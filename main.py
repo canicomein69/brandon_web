@@ -21,7 +21,6 @@ def MyCrud():
     passwordedit, set_passwordedit = use_state("")
     id_edit = use_state(0)
     edittodo =  use_state([])
-    mycolor,set_mycolor=use_state("red")
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -68,12 +67,6 @@ def MyCrud():
 
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
-
-    def changecolor(event):
-        set_mycolor("orange" if mycolor == "red" else "orange")
-
-     
-
 
 
 
@@ -135,21 +128,12 @@ def MyCrud():
             ),
             html.button(
                 {
-                    "style ":{"backgroud_color":mycolor,"color":"white"},
                     "type": "join",
-                    "on_color":changecolor,
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
                 },
                 "join",
-            html.input({
-                           "type":"checkbox",
-                           "value":"red",
-                           "on_click":lambda event:set_mycolor(event['target']['value'])
-                        }
-                          
-                      ),  
         
             ),
             html.div(
