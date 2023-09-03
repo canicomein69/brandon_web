@@ -125,13 +125,13 @@ def MyCrud():
                 Typography({
                     "variant":"h6",
                     "color":"darkblue",
-                    "style": {"padding": "10px","opacity":"50%"}
+                    "style": {"padding": "10px","opacity":"80%"}
                 },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch. With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"))
             ),
             html.img(
         {
            "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
-            "style": {"width": "100%" , "height":"50%"}, 
+            "style": {"width": "80%" , "height":"40%"}, 
             "alt": "Ray Charles",
         },
     ),
@@ -167,9 +167,8 @@ def MyCrud():
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
-            Button(
+            Button(html.b(
                 { 
-                    
                     "type": "join",
                     "size":"medium",
                     "style": {"padding": "10px"},
@@ -178,7 +177,7 @@ def MyCrud():
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
-                },
+                }),
                 "join",
         
             ),
