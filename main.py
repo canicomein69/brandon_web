@@ -33,7 +33,7 @@ def MyCrud():
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
     Typography = web.export(mui,"Typography")
-    
+    SendIcon = web.export(mui,"SendIcon")
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -145,13 +145,13 @@ def MyCrud():
                 }
             ),
             Button(
+                SendIcon(
                 { 
                     
                     "type": "join",
                     "size":"medium",
                     "color":"primary",
                     "variant":"contained",
-                    "endIcon":"SendIcon",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
                     ),
@@ -234,7 +234,7 @@ def MyCrud():
         },
     ),
      
-    )
+    ))
 
 
 
