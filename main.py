@@ -69,6 +69,12 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
 
+    def changecolor(event):
+        set_mycolor("orange" if mycolor == "red" else "orange")
+
+     
+
+
 
 
     list = [
@@ -91,9 +97,6 @@ def MyCrud():
 
     def handle_event(event):
         print(event)
-
-    def changecolor(event):
-        set_mycolor("orange" if mycolor == "red" else "orange")
 
     return html.div(
         {"style": {"padding": "10px"}},
@@ -131,14 +134,22 @@ def MyCrud():
                 }
             ),
             html.button(
-                {   
+                {
                     "style ":{"backgroud_color":mycolor,"color":"white"},
                     "type": "join",
+                    "on_color":changecolor,
                     "on_click": event(
-                        lambda event: mysubmit(event), prevent_default=True,
+                        lambda event: mysubmit(event), prevent_default=True
                     ),
                 },
                 "join",
+            html.input({
+                           "type":"checkbox",
+                           "value":"red",
+                           "on_click":lambda event:set_mycolor(event['target']['value'])
+                        }
+                          
+                      ),  
         
             ),
             html.div(
