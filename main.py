@@ -199,7 +199,7 @@ def MyCrud():
        
         html.img(
         {
-            "src": "https://picsum.photos/id/274/500/300",
+            "src": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.nintenderos.com%2F2022%2F07%2Flos-30-mejores-animes-recomendados-por-genero%2F&psig=AOvVaw2RobJqAFPTEzbUxMYHyv5o&ust=1693813181438000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCODOlP73jYEDFQAAAAAdAAAAABAI",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         }
