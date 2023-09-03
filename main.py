@@ -172,7 +172,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":nameedit,
-                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
                     "placeholder": "updatename",
                     "on_change": lambda event: set_nameedit(event["target"]["value"]),
                     
@@ -183,7 +183,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":ageedit,
-                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
                     "placeholder": "updateage",
                     "on_change": lambda event: set_ageedit(event["target"]["value"]),
                     
@@ -195,7 +195,7 @@ def MyCrud():
                     "type": "test",
                     "value":postal_codeedit,
                     "placeholder": "updatepostal_code",
-                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
                     "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
@@ -205,7 +205,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":passwordedit,
-                    "style":{"padding": "10px","display":"none" if is_edit.value == False else "block","margin":"1rem"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
                     "placeholder": "updatepassword",
                     "on_change": lambda event: set_passwordedit(event["target"]["value"]),
                     
