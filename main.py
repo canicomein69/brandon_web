@@ -68,7 +68,7 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
 
-
+    
 
     list = [
         html.li(
@@ -127,7 +127,8 @@ def MyCrud():
                 }
             ),
             html.button(
-                {
+                { 
+                    "color":"primary",
                     "type": "join",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
