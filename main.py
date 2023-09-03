@@ -199,7 +199,7 @@ def MyCrud():
        
         html.img(
         {
-            "src": "https://picsum.photos/id/274/500/300",
+           "src": "builtin/demon.jpg",
             "style": {"width": "100%" , "height":"50%"}, 
             "alt": "Ray Charles",
         }
