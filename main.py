@@ -1,10 +1,17 @@
 from fastapi import FastAPI
 from reactpy.backend.fastapi import configure
-from reactpy import component, event, html, use_state
+from reactpy import component, event, html, use_state,web
 import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 
+mui = web.module_from_template(
+    "react",
+    "@mui/material",
+    fallback="please wait loading...."
+    )
+
+Button = web.export(mui,"Button")
 
 @component
 def MyCrud():
@@ -139,7 +146,7 @@ def MyCrud():
             html.div(
                 {
                 "style":{"display":"none" if is_edit.value == False else "block"},
-                "color":"primary"
+                
                 },
                  html.input(
                 {
@@ -192,6 +199,9 @@ def MyCrud():
             )
 
         ),
+             Button({
+                    "color":"primary",
+                    "variant":"contained",})
 
         ),
         
