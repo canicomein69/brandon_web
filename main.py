@@ -128,7 +128,6 @@ def MyCrud():
             ),
             html.button(
                 { 
-                    "color":"primary",
                     "type": "join",
                     "on_click": event(
                         lambda event: mysubmit(event), prevent_default=True
@@ -139,7 +138,8 @@ def MyCrud():
             ),
             html.div(
                 {
-                "style":{"display":"none" if is_edit.value == False else "block"}
+                "style":{"display":"none" if is_edit.value == False else "block"},
+                "color":"primary"
                 },
                  html.input(
                 {
