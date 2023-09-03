@@ -5,13 +5,7 @@ import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
 
-mui = web.module_from_template(
-    "react",
-    "@mui/material",
-    fallback="please wait loading...."
-    )
 
-Button = web.export(mui,"Button")
 
 @component
 def MyCrud():
@@ -28,6 +22,14 @@ def MyCrud():
     passwordedit, set_passwordedit = use_state("")
     id_edit = use_state(0)
     edittodo =  use_state([])
+
+    mui = web.module_from_template(
+    "react",
+    "@mui/material",
+    fallback="please wait loading...."
+    )
+
+    Button = web.export(mui,"Button")
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -189,9 +191,11 @@ def MyCrud():
                
             ),
             
-            html.button(
+            Button(
                 {
                     "type": "Update Guys",
+                    "color":"primary",
+                    "variant":"contained",
                     "on_click": event(
                         lambda event: savedata(event), prevent_default=True),
                 },
@@ -199,9 +203,7 @@ def MyCrud():
             )
 
         ),
-             Button({
-                    "color":"primary",
-                    "variant":"contained",})
+            
 
         ),
         
