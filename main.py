@@ -116,14 +116,14 @@ def MyCrud():
                CardConetent(
                 Typography({
                     "variant":"h5",
-                    "style": {"padding": "10px","background":"black"}
+                    "style": {"padding": "10px","background":"grey"}
                 },"Welcome to Anime World"))
             ),
             html.input(
                 {
                     "type": "test",
                     "placeholder": "name",
-                    "style": {"padding": "10px"},
+                    "style": {"padding": "10px","margin":"1rem"},
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
