@@ -126,12 +126,13 @@ def MyCrud():
         html.form(
             {"onsubmit": mysubmit},
                html.label(html.b(
-                Typography({
+                {
                     "variant":"h1",
+                    "font-size": "50px",
                     "style": {"padding": "20px"},
                     "color":"secondary",
                     "style": {"padding": "10px"}
-                },"Welcome to Anime World")
+                },"Welcome to Anime World"
             ),),
             
             Typography({
