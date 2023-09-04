@@ -76,25 +76,7 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
     
-    list = [
-        html.li(
-            {
-              "key":b,
-             
-            },
-            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-        html.br(  
-        html.button({
-            "on_click":lambda event, b=b:deletebtn(b)
-            },"delete"),
-
-        html.button({
-                "on_click":lambda event, b=b:editbtn(b)
-            },"edit"),
-            ))
-            for b, i in enumerate(alltodo.value)
-            
-    ]
+   
     def handle_event(event):
         print(event)
     
@@ -111,6 +93,25 @@ def MyCrud():
             "min-width":"700px",
            }
            },
+        html._( list = [
+        html.li(
+            {
+              "key":b,
+             
+            },
+            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
+        
+        html.button({
+            "on_click":lambda event, b=b:deletebtn(b)
+            },"delete"),
+
+        html.button({
+                "on_click":lambda event, b=b:editbtn(b)
+            },"edit"),
+            )
+            for b, i in enumerate(alltodo.value)
+            
+    ]),
         
         ## creating form for submission0
     
