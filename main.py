@@ -127,12 +127,12 @@ def MyCrud():
                    "style": {"padding": "10px","opacity":"70%"}},
                CardConetent(
                 Typography({
-                    "variant":"h5",
+                    "variant":"h3",
                     "color":"secondary",
-                    "style": {"padding": "10px","opacity":"50%"}
+                    "style": {"padding": "10px"}
                 },"Welcome to Anime World"))
             ),
-             Card(
+             Card({"style": {"padding": "10px","opacity":"70%"}},
                CardConetent(
                 Typography({
                     "variant":"h6",
