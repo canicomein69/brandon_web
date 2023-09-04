@@ -136,9 +136,7 @@ def MyCrud():
                     "style": {"padding": "10px","opacity":"80%"}
                 },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch. With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"))
             ),
-            html.img({
-                "background-image":"url:url_for'brandon_web',filname=images.jpeg"
-            }),
+            
           
             html.input(
                 {
@@ -263,24 +261,23 @@ def MyCrud():
 
 
 app = FastAPI()
-
 @app.get("/generate_image")
 async def generate_image():
     # Create a new image
-
-          image = Image.new("demon.jpg", (200, 200), color="red")
+    image = Image.new("RGB", (200, 200), color="red")
 
     # Draw something on the image (for demonstration purposes)
-          draw = ImageDraw.Draw(image)
-          draw.text((10, 10), "Hello, Image!", fill="black")
+    draw = ImageDraw.Draw(image)
+    draw.text((10, 10), "Hello, Image!", fill="black")
 
     # Convert the image to bytes
-          image_bytes = io.BytesIO()
-          image.save(image_bytes, format="jpg")
-          image_bytes = image_bytes.getvalue()
+    image_bytes = io.BytesIO()
+    image.save(image_bytes, format="JPEG")
+    image_bytes = image_bytes.getvalue()
 
     # Return the image as a response
-          return {"image": image_bytes}
+    return {"image": image_bytes}
+
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi 
