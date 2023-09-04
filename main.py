@@ -125,13 +125,13 @@ def MyCrud():
     
         html.form(
             {"onsubmit": mysubmit},
-               Card({"style": {"padding": "40px","opacity":"5%"}
+               Card({"style": {"padding": "40px","opacity":"65%"}
                      },
                      CardConetent(Typography(html.b(
                 {
                     "variant":"h1",
                     "color":"secondary",
-                    "style": {"padding": "40px"}
+                    "style": {"padding": "50px"}
                 },"Welcome to Anime World"),)
             ),),
             
