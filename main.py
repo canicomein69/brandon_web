@@ -129,7 +129,8 @@ def MyCrud():
             ),
             html.img(
         {
-           "src": "C:/Users/HP/Desktop/Github/webtrain/brandon_web/demon.jpg",
+           "src": "\Users\HP\Pictures\images.html",
+           "align":"middle",
             "style": {"width": "80%" , "height":"40%"}, 
             "alt": "Ray Charles",
         },
