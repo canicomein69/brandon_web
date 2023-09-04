@@ -127,14 +127,14 @@ def MyCrud():
             {"onsubmit": mysubmit},
                Card({"style": {"padding": "40px","opacity":"50%"}
                      },
-                     CardConetent(html.b(
+                     CardConetent(Typography(html.b(
                 {
                     "variant":"h1",
                     "color":"secondary",
-                },"Welcome to Anime World")
+                },"Welcome to Anime World"),)
             ),),
             
-            Typography({
+            html.p({
                     "variant":"h3",
                     "style": {"padding": "50px","opacity":"70%"},
                     "color":"darkblue",
