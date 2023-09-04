@@ -84,7 +84,7 @@ def MyCrud():
               "key":b,
              
             },
-            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
+            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']},color:secondary ",
         
         
         Button({
