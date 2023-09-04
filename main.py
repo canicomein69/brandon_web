@@ -1,15 +1,12 @@
+
 from fastapi import FastAPI
 from reactpy.backend.fastapi import configure
 from reactpy import component, event, html, use_state,web
+import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
-from fastapi import FastAPI
-from PIL import Image, ImageDraw
-import io
-
-
-
-
+from pydantic import BaseModel
+from typing import Union
 
 
 @component
@@ -27,7 +24,6 @@ def MyCrud():
     passwordedit, set_passwordedit = use_state("")
     id_edit = use_state(0)
     edittodo =  use_state([])
-
     mui = web.module_from_template(
     "react",
     "@mui/material"
@@ -38,19 +34,11 @@ def MyCrud():
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
     Typography = web.export(mui,"Typography")
-    Alert= web.export(mui,"Alert")
-
-    
-
-
-    
-
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
         # push this to alltodo
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
-
        # looping data from alltodo to show on web
     def deletebtn(b):
         is_edit.set_value(True)
@@ -72,7 +60,6 @@ def MyCrud():
                 set_postal_codeedit(x['postal_code'])
                 set_passwordedit(x['password'])
                 id_edit.set_value(b)
-
     def savedata(event):
         for i,x in enumerate(alltodo.value):
             if i == id_edit.value:
@@ -85,12 +72,10 @@ def MyCrud():
         set_ageedit("")
         set_postal_codeedit("")
         set_passwordedit("")
-
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
-
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
-
+    
     list = [
         html.li(
             {
@@ -108,26 +93,23 @@ def MyCrud():
             for b, i in enumerate(alltodo.value)
             
     ]
-
     def handle_event(event):
         print(event)
     
     return html.div(
-         
         
         ## creating form for submission0
-        
+    
         html.form(
             {"onsubmit": mysubmit},
                Card(
                CardConetent(
                 Typography({
-                    "variant":"h4",
+                    "variant":"h5",
                     "color":"secondary",
                     "style": {"padding": "10px","opacity":"50%"}
                 },"Welcome to Anime World"))
             ),
-            
              Card(
                CardConetent(
                 Typography({
@@ -136,7 +118,9 @@ def MyCrud():
                     "style": {"padding": "10px","opacity":"80%"}
                 },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch. With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"))
             ),
-            
+            html.img({
+                "background-image":"url({{url_for'BRANDON_WEB',filname='images.jpeg'}})"
+            }),
           
             html.input(
                 {
@@ -185,11 +169,6 @@ def MyCrud():
                 },
                 "join",
         
-            ),
-            Alert({
-            "severity":"info",
-            
-            },"before join fill the details",
             ),
             html.div(
                 
@@ -251,32 +230,28 @@ def MyCrud():
                 "Update Guys",
             ),
              
-
         ),
      
             
-
         ),
         
         html.ul(list),
-
        
     )
 
 
-
 app = FastAPI()
-
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi 
-
+app = FastAPI()
 
 #copy and paste the mongo DB URI 
 uri="mongodb+srv://Brandonweb:brandon123@cluster0.miqe39j.mongodb.net/?retryWrites=true&w=majority"
 client= MongoClient (uri, server_api=ServerApi("1"))  #camel case
 
 #defining the Db name
+
 db= client ["web"]
 collection=db["newform"]
 
@@ -284,38 +259,38 @@ collection=db["newform"]
 try:
     client.admin.command("Ping")
     print("Successfully Connected MongoDB")
-
 except Exception as e:
     print(e)
 
 def login(
     login_data: dict,
+
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
+    
     username = login_data["name"]
     age = login_data["age"]
     postal_code = login_data["postal_code"]
     password = login_data["password"]
-
     # Create a document to insert into the collection
+
     document = {"name":username, "age":age, "postal_code":postal_code,"password": password}
     # logger.info("sample log messege")
     print(document)
-
     #Insert the docoument into the collection
+
     post_id = collection.insert_one(document).inserted_id #insert document
     print(post_id)
-
     print({"Login successful"})
-
 def update(
     update_data: dict,
+
  ): # removed async, since await makes code  execution pause for the promise to resolve anyway. doesnt
     usernameedit = update_data["updatename"]
     ageedit = update_data["updateage"]
     postal_codeedit = update_data["updatepostal_code"]
     passwordedit = update_data["updatepassword"]
-
     # Create a document to insert into the collection
+
     updatedocument = {"updatename":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"udpatepassword": passwordedit}
     # logger.info("sample log messege")
     print(updatedocument)
