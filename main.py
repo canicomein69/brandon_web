@@ -292,7 +292,7 @@ def login(
     post_id = collection.insert_one(document).inserted_id #insert document
     print(post_id)
 
-    return {"messege": "Login successful"}
+    print({"messege": "Login successful"})
 
 def update(
     update_data: dict,
