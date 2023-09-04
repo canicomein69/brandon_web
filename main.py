@@ -110,7 +110,7 @@ def MyCrud():
             "background-repeat":"no-repeat",
             "background-attached":"fixed",
             "background-size":"cover",
-            "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)",
+            "background_image":"url(https://brandonleon.neocities.org/35458.gif)",
             
            }
            },
@@ -119,21 +119,25 @@ def MyCrud():
     
         html.form(
           html.b(html.h1(
-                    {"style": {"font-family": "Arial",
+                    {"style": {"font-family": "Times New Roman (serif)",
                                 "font-size": "40px",
-                                "border":"1px solid Tomato",
+                                "border":"8.5px Black",
                                 "border-radius": "20px",
+                                "opcaity":"50%",
+                                "background-color":"hsla(120, 100%, 25%, 0.3)",
+                                "background-opacity":"50%",
                                 "padding": "15px 25px",
+                                "border-style": "outset",
                                 "box-sizing": "border-box",
-                                "color":"PowderBlue"}}
+                                "color":"#800080"}}
                     ,"Welcome to Anime World",)),
                 html.br(),
             
-            html.p(Card({"style": {"padding": "10px 15px","opacity":"70%"}},
+            html.p(Card({"style": {"padding": "10px 15px","opacity":"70%","font-size": "50px","background-color":"hsla(120, 100%, 25%, 0.3)"}},
                         CardConetent(
                             Typography({
-                                       "variant":"h6",
-                                       "color":"SaddleBrown",
+                                       "variant":"h5",
+                                       "color":"Black",
                     
                 },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch.With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"),
             ))),
@@ -142,7 +146,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "name",
-                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "15px"},
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
@@ -150,7 +154,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "age",
-                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "15px"},
                     "on_change": lambda event: set_age(event["target"]["value"]),
                 }
             ),
@@ -159,7 +163,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "postal_code",
-                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "15px"},
                     "on_change": lambda event: set_postal_code(event["target"]["value"]),
                 }
             ),
@@ -167,7 +171,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "password",
-                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "15px"},
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
@@ -190,7 +194,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":nameedit,
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "15px"},
                     "placeholder": "updatename",
                     "on_change": lambda event: set_nameedit(event["target"]["value"]),
                     
@@ -201,7 +205,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":ageedit,
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "15px"},
                     "placeholder": "updateage",
                     "on_change": lambda event: set_ageedit(event["target"]["value"]),
                     
@@ -214,7 +218,7 @@ def MyCrud():
                     "type": "test",
                     "value":postal_codeedit,
                     "placeholder": "updatepostal_code",
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "15px"},
                     "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
@@ -224,7 +228,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":passwordedit,
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "15px"},
                     "placeholder": "updatepassword",
                     "on_change": lambda event: set_passwordedit(event["target"]["value"]),
                     
