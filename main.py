@@ -179,7 +179,7 @@ def MyCrud():
                 "join",
         
             ),
-            html.div(
+            
             html.input(
                 {
                     "type": "test",
@@ -246,7 +246,7 @@ def MyCrud():
         html.ul(list),
        
     )
-)
+
 
 
 app = FastAPI()
