@@ -80,7 +80,6 @@ def MyCrud():
         
       
         html.li(
-            (
             {
               "key":b,
              
@@ -101,9 +100,9 @@ def MyCrud():
             "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
             )
-            for b, i in enumerate(alltodo.value)),
+            for b, i in enumerate(alltodo.value)
             
-    ],
+    ]
     def handle_event(event):
         print(event)
     
