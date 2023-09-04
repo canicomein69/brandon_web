@@ -98,7 +98,7 @@ def MyCrud():
             "color":"secondary",
             "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
-            ),)
+            ))
             for b, i in enumerate(alltodo.value)
             
     ],
