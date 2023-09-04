@@ -79,12 +79,13 @@ def MyCrud():
     list = [
         
       
-        html.li(
+        html.div(
             {
               "key":b,
              
             },
-            html.label(f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} "),
+            (f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} "),
+        
         
         
         Button({
