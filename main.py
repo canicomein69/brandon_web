@@ -76,7 +76,7 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
    
-    list = [
+    Card(list = [
         
       
         html.li(
@@ -101,7 +101,7 @@ def MyCrud():
             )
             for b, i in enumerate(alltodo.value)
             
-    ]
+    ]),
     def handle_event(event):
         print(event)
     
