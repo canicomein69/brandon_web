@@ -111,8 +111,7 @@ def MyCrud():
     
         html.form(
             html.img({
-                "background":"demon.jpg"}
-            ),
+                "background":"demon.jpg"},
             {"onsubmit": mysubmit},
                Card(
                CardConetent(
@@ -240,7 +239,7 @@ def MyCrud():
             ),
              
 
-        ),
+        ),),
      
             
 
