@@ -133,7 +133,7 @@ def MyCrud():
                     "type": "test",
                     "placeholder": "name",
                     "valign":"middle",
-                    "style": {"padding": "10px","margin":"1rem",},
+                    "style": {"padding": "10px","margin":"1rem","valign":"middle"},
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
