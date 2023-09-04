@@ -76,10 +76,10 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
    
-    list = [ Card(
+    list = [
         
       
-        html.li(
+        Card(
             {
               "key":b,
              
@@ -98,7 +98,7 @@ def MyCrud():
             "color":"secondary",
             "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
-            ))
+            )
             for b, i in enumerate(alltodo.value)
             
     ],
