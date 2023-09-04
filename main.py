@@ -179,8 +179,6 @@ def MyCrud():
                 "join",
         
             ),
-            
-            html.br(),
             html.div(
             html.input(
                 {
