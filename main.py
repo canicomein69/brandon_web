@@ -75,7 +75,7 @@ def MyCrud():
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
-    html.br(),
+   
     list = [
         html.br(),
         html.p(""),
