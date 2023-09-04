@@ -268,7 +268,7 @@ app = FastAPI()
 async def generate_image():
     # Create a new image
 
-          image = Image.new("RGB", (200, 200), color="white")
+          image = Image.new("demon.jpg", (200, 200), color="red")
 
     # Draw something on the image (for demonstration purposes)
           draw = ImageDraw.Draw(image)
@@ -276,7 +276,7 @@ async def generate_image():
 
     # Convert the image to bytes
           image_bytes = io.BytesIO()
-          image.save(image_bytes, format="PNG")
+          image.save(image_bytes, format="jpg")
           image_bytes = image_bytes.getvalue()
 
     # Return the image as a response
