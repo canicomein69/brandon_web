@@ -126,7 +126,7 @@ def MyCrud():
         html.form(
             {"onsubmit": mysubmit},
                html.b(Card({
-                   "style": {"padding": "50px","opacity":"70%"}},
+                   "style": {"padding": "50px","opacity":"30%"}},
                CardConetent(
                 Typography({
                     "variant":"h3",
