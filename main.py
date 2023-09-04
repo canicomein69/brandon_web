@@ -106,13 +106,26 @@ def MyCrud():
         print(event)
     
     return html.div(
+        {"style": 
+         {  "padding": "50px",
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center",
+            "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)", 
+            "background-size":"cover",
+            "margin": "0px",
+            "min-height": "600px",
+            "min-width":"600px",
+           }
+           },
         
         ## creating form for submission0
     
         html.form(
             {"onsubmit": mysubmit},
                Card(
-               CardConetent(
+               CardConetent({
+                   "style": {"padding": "10px","opacity":"70%"}},
                 Typography({
                     "variant":"h5",
                     "color":"secondary",
