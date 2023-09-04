@@ -186,8 +186,8 @@ def MyCrud():
         
             ),
             Alert({
-            "severity":"Success"
-            },"this alert test"
+            "severity":"success"
+            },
             ),
             html.div(
                 
