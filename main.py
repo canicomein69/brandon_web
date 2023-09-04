@@ -114,7 +114,7 @@ def MyCrud():
             
            }
            },
-        html.link({"rel":"icon","type":"url(https://brandonleon.neocities.org/demon.jpg.jpg)"}),
+        
         ## creating form for submission0
     
         html.form(
@@ -142,24 +142,24 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "name",
-                    "valign":"middle",
-                    "style": {"padding": "10px","margin":"1rem"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
-             html.input(
+            html.input(
                 {
                     "type": "test",
                     "placeholder": "age",
-                    "style": {"padding": "10px","margin":"1rem"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
                     "on_change": lambda event: set_age(event["target"]["value"]),
                 }
             ),
-             html.input(
+            html.br(),
+            html.input(
                 {
                     "type": "test",
                     "placeholder": "postal_code",
-                    "style": {"padding": "10px","margin":"1rem"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
                     "on_change": lambda event: set_postal_code(event["target"]["value"]),
                 }
             ),
@@ -167,7 +167,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "placeholder": "password",
-                    "style": {"padding": "10px","margin":"1rem"},
+                    "style": {"padding": "10px","margin":"1rem", "border-radius": "20px"},
                     "on_change": lambda event: set_password(event["target"]["value"]),
                 }
             ),
@@ -190,7 +190,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":nameedit,
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
                     "placeholder": "updatename",
                     "on_change": lambda event: set_nameedit(event["target"]["value"]),
                     
@@ -201,19 +201,20 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":ageedit,
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
                     "placeholder": "updateage",
                     "on_change": lambda event: set_ageedit(event["target"]["value"]),
                     
                 },
                
             ),
+            html.br(),
             html.input(
                 {
                     "type": "test",
                     "value":postal_codeedit,
                     "placeholder": "updatepostal_code",
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
                     "on_change": lambda event: set_postal_codeedit(event["target"]["value"]),
                     
                 },
@@ -223,7 +224,7 @@ def MyCrud():
                 {
                     "type": "test",
                     "value":passwordedit,
-                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block"},
+                    "style":{"padding": "10px","margin":"2rem","display":"none" if is_edit.value == False else "block", "border-radius": "20px"},
                     "placeholder": "updatepassword",
                     "on_change": lambda event: set_passwordedit(event["target"]["value"]),
                     
