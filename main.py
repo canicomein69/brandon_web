@@ -104,14 +104,12 @@ def MyCrud():
 
     def handle_event(event):
         print(event)
-
+    
     return html.div(
         
         ## creating form for submission0
     
         html.form(
-            html.img({
-                "background":"demon.jpg"},
             {"onsubmit": mysubmit},
                Card(
                CardConetent(
@@ -129,6 +127,9 @@ def MyCrud():
                     "style": {"padding": "10px","opacity":"80%"}
                 },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch. With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"))
             ),
+            html.img({
+                "background-image":"url({{url_for'BRANDON_WEB',filname='images.jpeg'}})"
+            }),
           
             html.input(
                 {
@@ -239,7 +240,7 @@ def MyCrud():
             ),
              
 
-        ),),
+        ),
      
             
 
