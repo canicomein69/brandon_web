@@ -29,11 +29,12 @@ def MyCrud():
     "@mui/material"
     
     )
-
+    #creating buttons using MUI
     Button = web.export(mui,"Button")
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
     Typography = web.export(mui,"Typography")
+    
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
         # push this to alltodo
@@ -72,82 +73,71 @@ def MyCrud():
         set_ageedit("")
         set_postal_codeedit("")
         set_passwordedit("")
+
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
         edittodo.set_value(edittodo.value + [updatetodo])
-        update(updatetodo)
-   
+        update(updatetodo)#function call to update function using the updated data
+        # getting updated data from edittodo to show on web
     list = [
-        
-      
         html.li(
             {
               "key":b,
              
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-        
-        
         Button({
-            "variant":"contained",
             "color":"secondary",
+            "variant":"contained",
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
-
+        html.br(),
         Button({
-            "variant":"contained",
             "color":"secondary",
+            "variant":"contained",
             "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
             )
             for b, i in enumerate(alltodo.value)
             
-    ],
+    ]
     def handle_event(event):
         print(event)
     
     return html.div(
         {"style": 
          {  "padding": "50px",
-            "display": "flex",
-            "align-items": "center",
+            
             "background-repeat":"no-repeat",
             "background-attached":"fixed",
             "background-size":"cover",
-            "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)", 
-            "background-size":"cover",
-            "margin": "0px",
-            "min-height": "600px",
-            "min-width":"600px",
+            "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)",
+            
            }
            },
         
         ## creating form for submission0
     
         html.form(
-            {"onsubmit": mysubmit},
-               Card({"style": {"padding": "40px","opacity":"65%"}
-                     },
-                     CardConetent(Typography(html.b(
-                {
-                    "variant":"h1",
-                    "color":"secondary",
-                    "style": {"padding": "50px"}
-                },"Welcome to Anime World"),)
-            ),),
+          html.b(html.h1(
+                    {"style": {"font-family": "Arial",
+                                "font-size": "40px",
+                                "border":"1px solid Tomato",
+                                "border-radius": "20px",
+                                "padding": "15px 25px",
+                                "box-sizing": "border-box",
+                                "color":"PowderBlue"}}
+                    ,"Welcome to Anime World",)),
+                html.br(),
             
-            html.p({
-                    "variant":"h3",
-                    "style": {"padding": "50px","opacity":"70%"},
-                    "color":"darkblue",
-                    "style": {"padding": "10px","opacity":"80%"}
-                },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch."),
-            html.p({
-                    "variant":"h3",
-                    "style": {"padding": "50px","opacity":"70%"},
-                    "color":"darkblue",
-                    "style": {"padding": "10px","opacity":"80%"}
-                },"With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"),
-          
+            html.p(Card({"style": {"padding": "10px 15px","opacity":"70%"}},
+                        CardConetent(
+                            Typography({
+                                       "variant":"h6",
+                                       "color":"SaddleBrown",
+                    
+                },"Anime has become a global phenomenon, and its popularity has skyrocketed in recent years. No matter how old you are or what background you grew up with, you can always find a good anime to watch.With 36% of viewers worldwide enjoying watching anime in 2021, according to Ampere Consumer data, free anime websites are snowballing as a result. Some are created to quench your thirst for anime, and some are there to break both your heart and bank account. Every anime enthusiast knows the pain of searching for safe and free anime websites to watch. We know it too, and we created Kaido to end it all.Welcome to Anime World"),
+            ))),
+           
             html.input(
                 {
                     "type": "test",
