@@ -114,7 +114,7 @@ def MyCrud():
             
            }
            },
-        
+        html.link({"rel":"icon","type":"url(https://brandonleon.neocities.org/demon.jpg.jpg)"}),
         ## creating form for submission0
     
         html.form(
