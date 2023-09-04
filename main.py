@@ -265,7 +265,7 @@ client= MongoClient (uri, server_api=ServerApi("1"))  #camel case
 
 #defining the Db name
 db= client ["web"]
-collection=db["base"]
+collection=db["newform"]
 
 #checking the connection
 try:
@@ -292,7 +292,7 @@ def login(
     post_id = collection.insert_one(document).inserted_id #insert document
     print(post_id)
 
-    print({"messege": "Login successful"})
+    print({"Login successful"})
 
 def update(
     update_data: dict,
@@ -311,6 +311,6 @@ def update(
     updatepost_id = collection.insert_one(updatedocument).inserted_id #insert document
     print(updatepost_id)
 
-    return {"messege": "Updated successful"}
+    print({"Updated successful"}) 
 
 configure(app, MyCrud)
