@@ -14,9 +14,9 @@ def MyCrud():
     ## Creating state
     alltodo = use_state([])
     name, set_name = use_state("")
-    age, set_age = use_state(0)
-    postal_code, set_postal_code = use_state(0)
-    password, set_password = use_state(0)
+    age, set_age = use_state("")
+    postal_code, set_postal_code = use_state("")
+    password, set_password = use_state("")
     is_edit = use_state(False)
     nameedit, set_nameedit = use_state("")
     ageedit, set_ageedit = use_state("")
@@ -35,7 +35,6 @@ def MyCrud():
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
     Typography = web.export(mui,"Typography")
-    SendIcon = web.export(mui,"SendIcon")
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -130,7 +129,7 @@ def MyCrud():
             ),
             html.img(
         {
-           "src": "https://media.geeksforgeeks.org/wp-content/uploads/rk.png",
+           "src": "demon.jpg.png",
             "style": {"width": "80%" , "height":"40%"}, 
             "alt": "Ray Charles",
         },
