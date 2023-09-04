@@ -97,6 +97,18 @@ def MyCrud():
         print(event)
     
     return html.div(
+        {"style": 
+         {  "padding": "50px",
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center",
+            "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)", 
+            "background-size":"cover",
+            "margin": "0px",
+            "min-height": "700px",
+            "min-width":"700px",
+           }
+           },
         
         ## creating form for submission0
     
