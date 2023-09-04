@@ -84,7 +84,10 @@ def MyCrud():
               "key":b,
              
             },
-            (f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} "),
+            html.label(f"{b} => {i['name']}"),
+            html.label(f"{b} => {i['age']}"),
+            html.label(f"{b} => {i['postal_code']}"),
+            html.label(f"{b} => {i['password']}"),
         
         
         
