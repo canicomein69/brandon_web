@@ -128,7 +128,7 @@ def MyCrud():
                Card(CardConetent(html.b(
                 {
                     "variant":"h1",
-                    "font-size": "75px",
+                    "font-size": "150px",
                     "style": {"padding": "20px"},
                     "color":"secondary",
                     "style": {"padding": "10px"}
