@@ -281,7 +281,7 @@ async def generate_image():
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi 
-app = FastAPI()
+
 
 #copy and paste the mongo DB URI 
 uri="mongodb+srv://Brandonweb:brandon123@cluster0.miqe39j.mongodb.net/?retryWrites=true&w=majority"
