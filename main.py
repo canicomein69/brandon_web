@@ -186,7 +186,8 @@ def MyCrud():
         
             ),
             Alert({
-            "severity":"success"
+            "severity":"success",
+            "style":{"padding": "10px","margin":"2rem","display":"none" if Button == False else "block"}
             },
             ),
             html.div(
