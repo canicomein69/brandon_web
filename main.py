@@ -110,9 +110,9 @@ def MyCrud():
          {  "padding": "50px",
             "display": "flex",
             "align-items": "center",
-            "justify-content": "center",
             "background-repeat":"no-repeat",
             "background-attached":"fixed",
+            "background-size":"cover",
             "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)", 
             "background-size":"cover",
             "margin": "0px",
@@ -126,7 +126,7 @@ def MyCrud():
         html.form(
             {"onsubmit": mysubmit},
                Card({
-                   "style": {"padding": "10px","opacity":"70%"}},
+                   "style": {"padding": "50px","opacity":"70%"}},
                CardConetent(
                 Typography({
                     "variant":"h3",
@@ -134,7 +134,7 @@ def MyCrud():
                     "style": {"padding": "10px"}
                 },"Welcome to Anime World"))
             ),
-             Card({"style": {"padding": "10px","opacity":"70%"}},
+             Card({"style": {"padding": "50px","opacity":"70%"}},
                CardConetent(
                 Typography({
                     "variant":"h6",
