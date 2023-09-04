@@ -38,6 +38,7 @@ def MyCrud():
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
     Typography = web.export(mui,"Typography")
+    Alert= web.export(mui,"Alert")
 
     
 
@@ -89,25 +90,6 @@ def MyCrud():
 
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
-
-    @app.get("/images")
-    async def generate_image():
-    # Create a new image
-       image = Image.new("images", (200, 200), color="red")
-
-    # Draw something on the image (for demonstration purposes)
-       draw = ImageDraw.Draw(image)
-       draw.text((10, 10), "Hello, Image!", fill="black")
-
-    # Convert the image to bytes
-       image_bytes = io.BytesIO()
-       image.save(image_bytes, format="JPEG")
-       image_bytes = image_bytes.getvalue()
-
-    # Return the image as a response
-       return {"image": image_bytes}
-
-    
 
     list = [
         html.li(
@@ -202,6 +184,10 @@ def MyCrud():
                 },
                 "join",
         
+            ),
+            Alert({
+            "severity":"Success"
+            },"this alert test"
             ),
             html.div(
                 
