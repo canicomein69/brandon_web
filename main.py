@@ -76,33 +76,30 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
    
-    list = [
+    
         
       
         html.div(
-            {
-              "key":b,
-             
-            },
-            (f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} "),
+            
+             (f" => {['name']} ; {['age'] }; {['postal_code'] }; {['password']} "),
         
         
         
         Button({
             "variant":"contained",
             "color":"secondary",
-            "on_click":lambda event, b=b:deletebtn(b)
+            "on_click":lambda event:deletebtn
             },"delete"),
 
         Button({
             "variant":"contained",
             "color":"secondary",
-            "on_click":lambda event, b=b:editbtn(b)
+            "on_click":lambda event:editbtn
             },"edit"),
-            )
-            for b, i in enumerate(alltodo.value)
             
-    ]
+        enumerate(alltodo.value)),
+            
+
     def handle_event(event):
         print(event)
     
