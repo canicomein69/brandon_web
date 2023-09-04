@@ -183,7 +183,7 @@ def MyCrud():
         
             ),
             
-                
+            html.br(),
             html.input(
                 {
                     "type": "test",
