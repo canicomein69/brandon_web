@@ -4,8 +4,11 @@ from reactpy import component, event, html, use_state,web
 import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
-from pydantic import BaseModel
-from typing import Union
+from fastapi import FastAPI
+from PIL import Image, ImageDraw
+import io
+
+
 
 
 
@@ -35,6 +38,27 @@ def MyCrud():
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
     Typography = web.export(mui,"Typography")
+
+    @app.get("/generate_image")
+    async def generate_image():
+    # Create a new image
+
+          image = Image.new("RGB", (200, 200), color="white")
+
+    # Draw something on the image (for demonstration purposes)
+          draw = ImageDraw.Draw(image)
+          draw.text((10, 10), "Hello, Image!", fill="black")
+
+    # Convert the image to bytes
+          image_bytes = io.BytesIO()
+          image.save(image_bytes, format="PNG")
+          image_bytes = image_bytes.getvalue()
+
+    # Return the image as a response
+          return {"image": image_bytes}
+
+
+    
 
     def mysubmit(event):
         newtodo = {"name": name, "age":age , "postal_code":postal_code , "password": password}
@@ -108,7 +132,7 @@ def MyCrud():
     return html.div(
         
         ## creating form for submission0
-    
+        
         html.form(
             {"onsubmit": mysubmit},
                Card(
@@ -119,6 +143,7 @@ def MyCrud():
                     "style": {"padding": "10px","opacity":"50%"}
                 },"Welcome to Anime World"))
             ),
+            
              Card(
                CardConetent(
                 Typography({
