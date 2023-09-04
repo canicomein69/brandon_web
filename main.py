@@ -75,15 +75,18 @@ def MyCrud():
         updatetodo = {"updatename": nameedit, "updateage": ageedit, "updatepostal_code":postal_codeedit, "updatepassword" : passwordedit}
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
-    
+    html.br(),
     list = [
-        html.ul(
+        html.br(),
+        html.p(""),
+        html.li(
             {
               "key":b,
              
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-        
+        html.br(),
+        html.p(""),
         html.button({
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
