@@ -83,13 +83,15 @@ def MyCrud():
              
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
+        html.br(  
         html.button({
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
+
         html.button({
                 "on_click":lambda event, b=b:editbtn(b)
             },"edit"),
-            )
+            ))
             for b, i in enumerate(alltodo.value)
             
     ]
