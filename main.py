@@ -130,7 +130,6 @@ def MyCrud():
                      CardConetent(html.b(
                 {
                     "variant":"h1",
-                    "font-size": "100px",
                     "color":"secondary",
                 },"Welcome to Anime World")
             ),),
