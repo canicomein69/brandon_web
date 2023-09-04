@@ -80,7 +80,7 @@ def MyCrud():
         
       
         html.div(
-            html.form(
+            html.label(
             {
               "key":b,
              
