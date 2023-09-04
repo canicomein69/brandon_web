@@ -111,7 +111,7 @@ def MyCrud():
     
         html.form(
             html.img({
-                "background":"C:\Users\HP\Desktop\Github\webtrain\brandon_web\demon"}
+                "background":"demon.jpg"}
             ),
             {"onsubmit": mysubmit},
                Card(
