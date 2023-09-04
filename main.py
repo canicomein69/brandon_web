@@ -77,16 +77,16 @@ def MyCrud():
         update(updatetodo)
    
     list = [
-        html.br(),
-        html.p(""),
+        
+      
         html.li(
             {
               "key":b,
              
             },
             f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-        html.br(),
-        html.p(""),
+        
+        
         html.button({
             "on_click":lambda event, b=b:deletebtn(b)
             },"delete"),
@@ -121,11 +121,11 @@ def MyCrud():
             {"onsubmit": mysubmit},
                Card(
                CardConetent(
-                Typography({
+               {
                     "variant":"h5",
                     "color":"secondary",
                     "style": {"padding": "10px","opacity":"50%"}
-                },"Welcome to Anime World"))
+                },"Welcome to Anime World")
             ),
              Card(
                CardConetent(
