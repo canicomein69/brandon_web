@@ -79,8 +79,8 @@ def MyCrud():
     list = [
         
       
-        html.div(
-            html.label(
+        html.li(
+            (
             {
               "key":b,
              
