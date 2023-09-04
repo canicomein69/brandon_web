@@ -111,6 +111,8 @@ def MyCrud():
             "display": "flex",
             "align-items": "center",
             "justify-content": "center",
+            "background-repeat":"no-repeat",
+            "background-attached":"fixed",
             "background_image":"url(https://brandonleon.neocities.org/demon.jpg.jpg)", 
             "background-size":"cover",
             "margin": "0px",
