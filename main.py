@@ -84,11 +84,7 @@ def MyCrud():
               "key":b,
              
             },
-            html.label(f"{b} => {i['name']}"),
-            html.label(f"{b} => {i['age']}"),
-            html.label(f"{b} => {i['postal_code']}"),
-            html.label(f"{b} => {i['password']}"),
-        
+            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
         
         
         Button({
@@ -129,15 +125,14 @@ def MyCrud():
     
         html.form(
             {"onsubmit": mysubmit},
-               html.b(Card({
-                   "style": {"padding": "20px"}},
-               CardConetent(
+               html.b(
                 Typography({
                     "variant":"h3",
+                    "style": {"padding": "20px"},
                     "color":"secondary",
                     "style": {"padding": "10px"}
-                },"Welcome to Anime World"))
-            )),
+                },"Welcome to Anime World")
+            ),
             
             Typography({
                     "variant":"h6",
