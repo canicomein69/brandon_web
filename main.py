@@ -76,28 +76,7 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)
    
-    list = [
-        
-      
-        html.li(
-            {
-              "key":b,
-             
-            },
-            f"{b} => {i['name']} ; {i['age'] }; {i['postal_code'] }; {i['password']} ",
-        
-        
-        html.button({
-            "on_click":lambda event, b=b:deletebtn(b)
-            },"delete"),
-
-        html.button({
-                "on_click":lambda event, b=b:editbtn(b)
-            },"edit"),
-            )
-            for b, i in enumerate(alltodo.value)
-            
-    ]
+    
     def handle_event(event):
         print(event)
     
@@ -115,7 +94,18 @@ def MyCrud():
                     "style": {"padding": "10px","opacity":"50%"}
                 },"Welcome to Anime World"))
             ),
-             Card(
+            html.li(
+            {
+              
+             
+            },
+            html.button({
+                "on_click":lambda event :editbtn(f" =>{['name']} ; {['age'] }; {['postal_code'] }; {['password']}"),
+            },"edit")  in enumerate(alltodo.value),
+            html.button({
+            "on_click":lambda event, :deletebtn("{['name']} ; {['age'] }; {['postal_code'] }; {['password']}")
+            },"delete")  in enumerate(alltodo.value),),
+            Card(
                CardConetent(
                 Typography({
                     "variant":"h6",
