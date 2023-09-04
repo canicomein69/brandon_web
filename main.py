@@ -113,7 +113,7 @@ def MyCrud():
         print(event)
     
     return html.div(
-         {"style": 
+         html.img({"style": 
          {  "padding": "50px",
             "display": "flex",
             "align-items": "center",
@@ -124,7 +124,7 @@ def MyCrud():
             "min-height": "600px",
             "min-width":"600px",
            }
-           },
+           }),
         
         ## creating form for submission0
         
