@@ -170,9 +170,9 @@ def MyCrud():
                 "join",
         
             ),
-            html.div(
+            
                 
-                 html.input(
+            html.input(
                 {
                     "type": "test",
                     "value":nameedit,
@@ -230,7 +230,7 @@ def MyCrud():
                 "Update Guys",
             ),
              
-        ),
+        
      
             
         ),
