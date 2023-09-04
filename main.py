@@ -186,9 +186,9 @@ def MyCrud():
         
             ),
             Alert({
-            "severity":"success",
-            "style":{"padding": "10px","margin":"2rem","display":"none" if Button == False else "block"}
-            },
+            "severity":"info",
+            
+            },"before join fill the details",
             ),
             html.div(
                 
