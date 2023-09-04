@@ -110,6 +110,9 @@ def MyCrud():
         ## creating form for submission0
     
         html.form(
+            html.img({
+                "background":"C:\Users\HP\Desktop\Github\webtrain\brandon_web\demon"}
+            ),
             {"onsubmit": mysubmit},
                Card(
                CardConetent(
@@ -133,7 +136,7 @@ def MyCrud():
                     "type": "test",
                     "placeholder": "name",
                     "valign":"middle",
-                    "style": {"padding": "10px","margin":"1rem","valign":"middle"},
+                    "style": {"padding": "10px","margin":"1rem"},
                     "on_change": lambda event: set_name(event["target"]["value"]),
                 }
             ),
