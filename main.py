@@ -2,11 +2,9 @@
 from fastapi import FastAPI
 from reactpy.backend.fastapi import configure
 from reactpy import component, event, html, use_state,web
-import reactpy as rp
 from fastapi.middleware.cors import CORSMiddleware
 from pymongo import MongoClient
-from pydantic import BaseModel
-from typing import Union
+
 
 
 @component
@@ -29,7 +27,7 @@ def MyCrud():
     "@mui/material"
     
     )
-    #creating buttons using MUI
+    #using react UI components to better style
     Button = web.export(mui,"Button")
     Card = web.export(mui,"Card")
     CardConetent = web.export(mui,"CardContent")
@@ -38,9 +36,12 @@ def MyCrud():
     def mysubmit(event):
         newtodo = {"full_name": full_name, "age":age , "postal_code":postal_code , "password": password}
         # push this to alltodo
+
         alltodo.set_value(alltodo.value + [newtodo])
         login(newtodo)  # function call to login function using the submitted data
        # looping data from alltodo to show on web
+
+    #creating delete and edit function to make adjustment in submited data
     def deletebtn(b):
         is_edit.set_value(True)
         for i,x in  enumerate(alltodo.value):
@@ -78,6 +79,8 @@ def MyCrud():
         edittodo.set_value(edittodo.value + [updatetodo])
         update(updatetodo)#function call to update function using the updated data
         # getting updated data from edittodo to show on web
+
+    #making adjustment with submited data
     list = [
         html.li(
             {
@@ -116,7 +119,7 @@ def MyCrud():
            }
            },
         
-        ## creating form for submission0
+        ## creating form for submission
     
         html.form(
           html.b(html.h1(
@@ -201,7 +204,7 @@ def MyCrud():
                     "value":full_nameedit,
                     "style":{"padding": "10px","margin":"1rem","display":"none" if is_edit.value == False else "block", "border-radius": "15px"},
                     "placeholder": "updatefull_name",
-                    "on_change": lambda event: full_nameedit(event["target"]["value"]),
+                    "on_change": lambda event: set_full_nameedit(event["target"]["value"]),
                     
                 },
                
@@ -269,7 +272,7 @@ app = FastAPI()
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi 
-app = FastAPI()
+
 
 #copy and paste the mongo DB URI 
 uri="mongodb+srv://Brandonweb:brandon123@cluster0.miqe39j.mongodb.net/?retryWrites=true&w=majority"
@@ -278,7 +281,7 @@ client= MongoClient (uri, server_api=ServerApi("1"))  #camel case
 #defining the Db name
 
 db= client ["web"]
-collection=db["newform"]
+collection=db["anime"]
 
 #checking the connection
 try:
@@ -306,6 +309,8 @@ def login(
     post_id = collection.insert_one(document).inserted_id #insert document
     print(post_id)
     print({"Login successful"})
+
+    #creating update statement to make appear the updated data
 def update(
     update_data: dict,
 
@@ -314,13 +319,13 @@ def update(
     ageedit = update_data["updateage"]
     postal_codeedit = update_data["updatepostal_code"]
     passwordedit = update_data["updatepassword"]
-    # Create a document to insert into the collection
+    # Create a updatedocument to insert into the collection
 
     updatedocument = {"updatefull_name":usernameedit, "updateage":ageedit, "updatepostal_code":postal_codeedit,"udpatepassword": passwordedit}
     # logger.info("sample log messege")
     print(updatedocument)
 
-    #Insert the docoument into the collection
+    #Insert the updatedocoument into the collection
     updatepost_id = collection.insert_one(updatedocument).inserted_id #insert document
     print(updatepost_id)
 
